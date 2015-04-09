@@ -1,0 +1,19 @@
+.aboutbox{
+	background: #eff3f7;
+	border-radius: 4px;
+	margin-bottom: 26px;
+}
+.aboutbox .aboutbox-header{
+	border-bottom: 2px #3ba8c0 solid;
+	margin: 0 0 16px 0;
+	padding: 19px 23px;
+	display: inline-block;
+	color: #3ba8c0;
+}
+
+.aboutbox .image-wrap{
+	float: left;
+}
+.aboutbox .worksheet{
+	float: left;
+}
