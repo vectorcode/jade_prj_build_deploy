@@ -1,17 +1,14 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 body {
-    background: url(../img/pattern.png) repeat;
-    height:100%;
-    font-family: 'fira_sanslight';
-  	color: #4a545d;
+	background: url(../img/pattern.png) repeat;
+	height:100%;
+	font-family: 'fira_sanslight';
+	color: #4a545d;
 }
 html {
-    height:100%;
+	height:100%;	
 }
+
+
 
 /* прибьём футер к низу*/
 .wrapper{
@@ -31,23 +28,25 @@ html {
 }
 /* прибьём футер к низу - конец*/
 
+
+
 /* Шапка */
 .container-big {
-    width: 1200px;
-    height: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
+  max-width: 1200px;
+  min-width: 960px;
+  height: 100%;
+	margin: 0 auto;
+  position: relative;
 }
 .page-header {
-    height: 119px;
-    background-color: #eff3f7;
-    position: relative;
-    margin-bottom: 39px;
+  height: 119px;
+  background: #eff3f7 url(../img/line.png) bottom center no-repeat;
+  position: relative;
+  margin-bottom: 39px;
 }
 .page-header .header-logo-link{
 	position: absolute;
-	top: 30px;
+	top: 39px;
 	left: 0;
 }
 .page-header .header-logo-text{
@@ -57,30 +56,35 @@ html {
 .page-header .socials{
 	position: absolute;
 	right: 0;
-	top: 36px;
-	margin: 0;
-	padding: 0;
+	top: 36px;	
 }
 /* Шапка - конец */
 
+
+
 /* Блок социальных ссылок */
+.socials{
+	margin: 0;
+	padding: 0;
+	width: 259px;
+}
 .socials .socials-item {
-    list-style: none;
-    display: inline-block;
-    height: 47px;
-    width: 47px;
-    margin-left: 19px;
-    /* Отступ у таких элементов всегда слева */
+  list-style: none;
+  display: inline-block;
+  height: 47px;
+  width: 47px;
+  margin-left: 19px;
+  /* Отступ у таких элементов всегда слева */
 }
 .socials .socials-item:first-child {
-    margin-left: 0;
-    /* А у первого элемента обнуляем отступ */
+  margin-left: 0;
+  /* А у первого элемента обнуляем отступ */
 }
 .socials .socials-link {display: block;
-    height: 100%;
-    width: 100%;
-    text-indent: -9999px;
-    background: url(../img/socials.png) no-repeat;
+  height: 100%;
+  width: 100%;
+  text-indent: -9999px;
+  background: url(../img/socials.png) no-repeat;
 }
 .socials .socials-link.vk {background-position: -2px -3px; }
 .socials .socials-link.tw {background-position: -71px -3px; }
@@ -89,16 +93,22 @@ html {
 .socials .socials-link:hover {background-position-y: -65px; }
 /* Блок социальных ссылок - конец */
 
+
+
 /* Сайдбар */
 .sidebar {
-	width: 257px;
+	width: 250px;
 	float: left;
 }
+
+
+
 /* Навигация */
 .navigation{
+	overflow: hidden;
 	background: #eff3f7;
-  	border-radius: 4px;
-  	margin-bottom: 26px;
+	border-radius: 4px;
+	margin-bottom: 26px;
 }
 .navigation .navigation-list {
 	list-style: none;
@@ -106,30 +116,63 @@ html {
 	padding: 0;
 }
 .navigation .navigation-item {
-
+	border-bottom: 2px solid #3ba8c0;
+	margin: 0 11px;
 }
+.navigation .navigation-item:last-child{
+	border-bottom: none;
+}
+/* Навигация - текущий пункт меню*/
+.navigation .navigation-item.current{	
+	background: #3ba8c0;
+	margin: 0;
+	border-bottom: none;
+	padding-left: 11px;
+	margin-top: -2px; /* Хак */
+}
+.navigation .navigation-item.current:first-child{
+	margin-top: 0; /* Хак */
+}
+.navigation .navigation-item.current .navigation-link{
+	color: #f9fafb;
+	font-size: 22px;
+}
+/* Навигация - текущий пункт меню - конец */
 .navigation .navigation-link {
+	font-family: 'fira_sansbook';
+	display: block;
 	font-size: 20px;
 	text-decoration: none;
 	color: #959aa8;
-	margin-left: 20px;
- }
+	margin-left: 16px;
+	padding: 20px 0px;
+}
+.navigation .navigation-link:hover{
+	color: #3ba8c0;
+} 
 /* Навигация - конец */
+
+
 
 /* Контакты */
 .contacts{
+	font-style: normal;
+	font-family: 'fira_sansbook';
 	background: #3ba8c0;
+	overflow: hidden;
 	border-radius: 4px;
 	margin-bottom: 26px;
 	color: white;
 }
 .contacts .contacts-header{
 	background: #3ba8c0;
-  	border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+	padding: 8px 19px 1px;
 }
 .contacts .header-inner-text{
 	font-size: 20px;
 	margin: 0;
+	display: block;
 }
 .contacts .contacts-list {
 	list-style: none;
@@ -137,53 +180,90 @@ html {
 	padding: 0;
 }
 .contacts .contacts-link{
-	color: white;
+	display: block;	
 	text-decoration: none;
+	padding: 6px 0 6px 82px;
+}
+.contacts .contact-text{
 	line-height: 1.3;
 	font-size: 15px;
+	color: white;
+}
+.contacts .contacts-item{
+	background: url(../img/cont.png) 42px center no-repeat;
+}
+.contacts .contacts-item.mail {
+  background-color: rgb( 65, 185, 212 );
+  background-position-y: 11px;
+}
+.contacts .contacts-item.phone {
+  background-color: rgb( 72, 203, 232 );
+}
+.contacts .contacts-item.skype {
+  background-color: rgb( 81, 218, 248 );
+  background-position-y: -127px;
+}
+.contacts .contact-text:hover{
+	border-bottom: 1px solid #fff;
 }
 /* Контакты - конец */
+
+
 
 /* Главная область */
 .variable-content{
 	width: 650px;
 	float: right;
-	position: relative;
 }
 
+
+
 /* Футер */
-.page-footer{
-	background: #eff3f7;
-}
-.page-footer .copyright{
-	text-align: center;
-}
-.page-footer .lock {
-	position: absolute;
-	top: 26px;
-	left: 20px;
-	padding-left: 20px;
-	background: url(../img/lock-close.png) no-repeat;
+.page-footer{	
+	background: #eff3f7 url(../img/line.png) top center no-repeat;
+	font-family: 'fira_sanslight';
+  color: #4a545d;
 }
 .page-footer .container {
-  	position: relative;  	
-  	padding: 20px 0; 
+	padding-top: 23px;
+	position: relative;  
 }
+.page-footer .copyright{
+	margin: 0 180px;
+	padding-top: 7px;
+	text-align: center;
+	font-size: 13px;
+}
+/* Логин */
+.page-footer .lock{
+	position: absolute;
+	top: 26px;
+	left: 20px;	
+}
+.lock .lock-inner {
+	display: block;
+	height: 40px;
+	font-family: 'fira_sansbook';
+  font-size: 16px;
+  line-height: 2.2;
+	color: #4a545d;
+	text-decoration: none;
+	background: url(../img/lock-close.png) no-repeat;
+	padding-left: 24px;
+}
+.lock .lock-inner:hover{
+	text-decoration: underline;
+	background: url(../img/lock-open.png) no-repeat;
+}
+/* Логин - конец */
+/* Футер - конец */
+
+
 
 /* общие классы */
 .container {
 	width: 960px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.page-header:after, .page-footer:before{
-	content: '';
-	background-image: -moz-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
-	background-image: -webkit-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
-	background-image: -ms-linear-gradient( 0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
-	width: 100%;
-	height: 3px;
-	position: absolute;	
+	margin: 0 auto;
 }
 .text-center{
 	text-align: center;
@@ -197,11 +277,11 @@ html {
 /* clearfix */
 .container:before, .clearfix:before,
 .container:after, .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+	content: " "; /* 1 */
+	display: table; /* 2 */
 }
 .container:after, .clearfix:after {
-    clear: both;
+  clear: both;	
 }
 /* clearfix - конец */
 /* общие классы - конец */
