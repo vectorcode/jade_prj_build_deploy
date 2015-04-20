@@ -29,7 +29,7 @@
 <body>
     <!--[if lt IE 7]>
     <p class="browsehappy">Ваш браузер <strong>устарел</strong>. Пожалуйста<a href="http://browsehappy.com/">обновите</a> его.</p>
-	<![endif]-->
+  <![endif]-->
     
     <div class="wrapper">
         <div class="main-content">
@@ -63,13 +63,13 @@
                     <!-- Навигация -->
                     <nav class="navigation">
                         <ul class="navigation-list">             
-                            <li class="navigation-item current">
+                            <li class="navigation-item">
                                 <a class="navigation-link" href="/">Обо мне</a>
                             </li>
                             <li class="navigation-item">
                                 <a class="navigation-link" href="/my-work.html">Мои работы</a>
                             </li>
-                            <li class="navigation-item">
+                            <li class="navigation-item current">
                                 <a class="navigation-link" href="/contact-me.html">Связаться со мной</a>
                             </li>
                         </ul>
@@ -103,84 +103,58 @@
                 <!-- / Левые блоки -->
                 <!-- Изменяемый контент -->
                 <div class="variable-content">
-                    <!-- Основная информация -->
+
+
+
+                    <!-- Мои работы -->
                     <section class="aboutbox">
-                        <div class="aboutbox-header">Основная информация</div>
-                        <div class="aboutbox-body clearfix">
-                                <div class="image-wrap">
-                                    <div class="avatar-box">
-                                        <img src="img/face.png" alt="Гомер Симпсон" class="avatar">
-                                    </div>
-                                </div>
-                                <div class="worksheet-wrap">
-                                    <ul class="worksheet-list">
-                                        <li class="worksheet-item clearfix">
-                                            <div class="worksheet-what">Меня зовут:</div>
-                                            <div class="worksheet-info">Иванов Андрей Степанович</div>
-                                        </li>
-                                        <li class="worksheet-item clearfix">
-                                            <div class="worksheet-what">Мой возраст:</div>
-                                            <div class="worksheet-info">25 лет</div>
-                                        </li>
-                                        <li class="worksheet-item clearfix">
-                                            <div class="worksheet-what">Мой город:</div>
-                                            <div class="worksheet-info">Санкт Петербург, Россия</div>
-                                        </li>
-                                        <li class="worksheet-item clearfix">
-                                            <div class="worksheet-what">Моя специализация:</div>
-                                            <div class="worksheet-info">FRONTEND разработчик</div>
-                                        </li>
-                                        <li class="worksheet-item clearfix">
-                                            <div class="worksheet-what">Ключевые навыки:</div>
-                                            <div class="worksheet-info skills">
-                                                <ul class="skills-list">
-                                                    <li class="skill-item">html</li>
-                                                    <li class="skill-item">css</li>
-                                                    <li class="skill-item">javascript</li>
-                                                    <li class="skill-item">gulp</li>
-                                                    <li class="skill-item">git</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                        </div>
-                    </section>
-                    <!-- / Основная информация -->
-                    <!-- Опыт работы -->
-                    <section class="aboutbox">
-                        <div class="aboutbox-header">Опыт работы</div>
+                        <div class="header-big-wrap">
+                          <div class="aboutbox-header-big">У вас интересный проект? Напишите мне!</div>
+                        </div>                       
                         <div class="aboutbox-body">
-                            <ul class="aboutbox-list">
-                                <li class="aboutbox-item icon-work">
-                                    <div class="where">"ИП Боровицкий" - Продавец дисков</div>
-                                    <div class="period">Сентябрь 2005 - Август 2008</div>
-                                </li>
-                                <li class="aboutbox-item icon-work">
-                                    <div class="where">"ООО Системы безопастности" - Системный администратор</div>
-                                    <div class="period">Июнь 2008 - Июль 2010</div>
-                                </li>
-                            </ul>
-                        </div>
+                          <div class="contact-form-wrap">
+                            <form id="contact-me" class="form contact-form">   
+                              <!-- Вывод сообщений с сервера -->
+                              <div class="server-mes error-mes"></div>
+                              <div class="server-mes success-mes"></div>
+                              <!-- Имя и email в одну строку, для этого обернем в div.form-line -->
+                              <div class="form-line clearfix">
+                                <!-- Имя -->
+                                <div class="form-group pull-left">
+                                  <label for="name" class="label">Имя</label>
+                                  <input type="text" name="name" class="input" id="name" placeholder="Как к вам обращаться" qtip-content="Вы не ввели имя">
+                                </div>
+                                <!-- Email -->
+                                <div class="form-group pull-right">
+                                  <label for="email" class="label">Email</label>
+                                  <input type="email" name="email" class="input" id="email" placeholder="Куда мне писать" qtip-position="right" qtip-content="Вы не ввели email">
+                                </div>
+                              </div>
+                              <!-- Сообщение -->
+                              <div class="form-group">
+                                <label for="message" class="label">Сообщение</label>
+                                <textarea name="message" id="message" class="textarea" rows="3" placeholder="Кратко в чем суть" qtip-content="Что вы от меня хотите?"></textarea>
+                              </div>
+                              <!-- Капча -->
+                              <div class="form-group captcha-wrap clearfix">
+                                <label for="captcha" class="label">Введите код, указанный на картинке</label>
+                                <img src="img/bg_captcha.jpg" alt="код" class="captcha pull-left"/>
+                                <input type="text" name="captcha" class="input input-captcha pull-right" id="captcha" placeholder="Введите код" qtip-position="right" qtip-content="Вы не ввели код">
+                              </div>
+                              <!-- Кнопка "Отправить" -->
+                              <div class="button-group">
+                                <button type="submit" class="btn">Отправить</button>
+                                <button type="reset" class="btn btn-res">Очистить</button>
+                              </div>      
+                            </form>
+                          </div>
+                        </div>      
                     </section>
-                    <!-- / Опыт работы -->
-                    <!-- Образование -->
-                    <section class="aboutbox">
-                        <div class="aboutbox-header">Образование</div>
-                        <div class="aboutbox-body">
-                            <ul class="aboutbox-list">
-                                <li class="aboutbox-item icon-college">
-                                    <div class="where">Незаконченное высшее. СПБНИУ ИТМО</div>
-                                    <div class="period">Октябрь 2012 - по настоящее время</div>
-                                </li>
-                                <li class="aboutbox-item icon-course">
-                                    <div class="where">Курсы Loftschool</div>
-                                    <div class="period">Ноябрь 2014 - по настоящее время</div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <!-- / Образование -->
+                    <!-- / Мои работы -->
+
+
+
+
                 </div>
                 <!-- / Изменяемый контент -->
             </div>
@@ -195,6 +169,7 @@
         </div>
     </footer>
 
+
     <!-- vendor JS -->
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/bpopup/jquery.bpopup.js"></script>
@@ -205,3 +180,11 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+

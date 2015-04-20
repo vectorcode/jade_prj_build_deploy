@@ -3,5 +3,10 @@
   "dependencies": {
     "jquery": "1.11",
     "normalize.css": "~3.0.3"
+  },
+  "devDependencies": {
+    "bpopup": "~0.11.0",
+    "modernizer": "~2.8.2",
+    "jquery-placeholder": "~2.1.1"
   }
 }

@@ -1,12 +1,21 @@
 var gulp = require("gulp"),
-	connect = require("gulp-connect"),
-	opn = require("opn");
+		connect = require("gulp-connect"),
+		opn = require("opn");
 
-// Запуск сервера
-gulp.task('connect', function() {
+// Запуск сервера c лайврелоадом
+gulp.task('serv_livereload', function() {
 	connect.server({
 		root: 'app',
 		livereload: true,
+		port: 8888
+	});
+	opn('http://localhost:8888');
+});
+
+// Запуск сервера без лайврелоада
+gulp.task('serv_no_livereload', function() {
+	connect.server({
+		root: 'app',
 		port: 8888
 	});
 	opn('http://localhost:8888');
@@ -38,4 +47,7 @@ gulp.task('watch', function () {
 });
 
 // Задача по-умолчанию 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['serv_livereload', 'watch']);
+
+// Для ie
+gulp.task('serv', ['serv_no_livereload', 'watch']);
