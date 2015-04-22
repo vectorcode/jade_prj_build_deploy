@@ -7,6 +7,7 @@
   "devDependencies": {
     "bpopup": "~0.11.0",
     "modernizer": "~2.8.2",
-    "jquery-placeholder": "~2.1.1"
+    "jquery-placeholder": "~2.1.1",
+    "qtip2": "~2.2.1"
   }
 }

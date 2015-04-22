@@ -157,3 +157,14 @@ input, textarea, button {
 	top: 0;
 }
 /* _____________ // file upload end _________ */
+
+
+/* _____________ тултипы _________ */
+.qtip-mystyle{
+	background-color: #f97e76;
+	border-color: #f97e76;
+	font-family: 'fira_sansbook';
+	color: #ffffff;
+	font-size: 13px;
+}
+/* _____________ // тултипы _________ */
