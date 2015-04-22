@@ -133,29 +133,27 @@ input, textarea, button {
   width: 100%;
   position: relative;
 }
-.fileupload-wrapper #fileupload {
-  height: 100%;
-  position: absolute;
-  z-index: 99;
-  right: 0;
-  margin-top: 4px;
-}
-.fileupload-wrapper #fileupload:after {
-  content: "";
-  display: block;
+.fileupload-lable{
+	display: block;
   width: 52px;
   height: 41px;
-  background: url(../img/upload-icon.png) 10px 7px no-repeat;
-  background-color: #48cbe8;
-  position: absolute;
-  top: -4px;
+	position: absolute;
   right: 0;
-  border-radius: 0 4px 4px 0;
+	background: url(../img/upload-icon.png) 10px 7px no-repeat;
+	background-color: #48cbe8;
+	border-radius: 0 4px 4px 0;
 }
-#fileupload{
-	width: 52px;
-	top: 0;
+.fileupload{ /* хак, взятый из html5boilerplate */
+	border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
+
 /* _____________ // file upload end _________ */
 
 

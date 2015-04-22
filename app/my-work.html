@@ -223,11 +223,13 @@
           </div>      
           <!-- Картинка проекта -->
           <div class="form-group">
-            <label for="projectImage" class="label">Картинка проекта</label>
             <div class="fileupload-wrapper" id="uploadfile">
-              <input id="fileupload" type="file" name="files[]" multiple="">
+            <span class="label">Картинка проекта</span>
+            <label class="fileupload-lable">
+              <input id="fileupload" class="fileupload" type="file" name="files[]">
               <input id="fileurl" type="hidden" name="fileurl">
-              <input id="filename" type="text" class="input" name="filename" placeholder="Загрузите изображение" disabled="" qtip-content="Вы не выбрали изображение">
+            </label>
+            <input id="filename" type="text" class="input" name="filename" placeholder="Загрузите изображение" disabled qtip-content="Вы не выбрали изображение">
             </div>
           </div>
           <!-- URL проекта -->

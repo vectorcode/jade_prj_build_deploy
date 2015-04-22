@@ -25,7 +25,7 @@ var addProject = (function (){
 	      ev.preventDefault();
 
 	      var form = $(this),
-	          url = '/app/ajax.php',
+	          url = '/ajax.php',
 	          defObject = _ajaxForm(form, url);
 
 	      if (defObject) {

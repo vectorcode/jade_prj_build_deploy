@@ -14,7 +14,7 @@ var contactMe = (function (){
 	      ev.preventDefault();
 
 	      var form = $(this),          
-	          url = '/app/send_mail.php',
+	          url = '/send_mail.php',
 	          defObject = _ajaxForm(form, url);
 
 	      if (defObject) {
