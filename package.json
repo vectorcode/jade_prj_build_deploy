@@ -1,7 +1,12 @@
 {
-	"devDependencies": {
-		"gulp": "^3.8.11",
-		"gulp-connect": "^2.2.0",
-		"opn": "^1.0.1"
-	}
+  "name": "dz1_dima",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0",
+    "gulp-jade": "^1.0.0",
+    "jade": "^1.9.2",
+    "opn": "^1.0.1"
+  }
 }
