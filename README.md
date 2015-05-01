@@ -7,3 +7,7 @@
 2. npm i
 3. gulp
 
+Для перехода к версии с JADE
+
+git checkout lev2
+
